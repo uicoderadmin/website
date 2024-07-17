@@ -20,10 +20,18 @@ const config = {
       padding: "2rem"
     },
     extend: {
+      boxShadow: {
+        "custom-inset": "inset 0px 0px 23px 16px rgba(255, 255, 255, 0.5)"
+      },
       backgroundImage: {
-        "square-pattern": "url('/squares.png')"
+        "square-pattern": "url('/squares.png')",
+        "black-gradient":
+          "linear-gradient(rgba(25, 25, 25, 0), rgba(25, 25, 25, 1))",
+        "white-overlay":
+          "linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3))"
       },
       colors: {
+        "custom-green": "rgba(172, 255, 36, 0.2)",
         absolute: {
           white: "#FFF",
           black: "#000"
