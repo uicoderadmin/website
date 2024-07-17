@@ -14,20 +14,20 @@ import { useState } from "react";
 const items = [
   {
     id: "webDesign",
-    label: "Web Design"
+    label: "Web Design",
   },
   {
     id: "mobileAppDesign",
-    label: "Mobile App Design"
+    label: "Mobile App Design",
   },
   {
     id: "logoDesign",
-    label: "Logo Design"
+    label: "Logo Design",
   },
   {
     id: "others",
-    label: "Others"
-  }
+    label: "Others",
+  },
 ] as const;
 
 const FormSchema = z.object({
@@ -37,10 +37,10 @@ const FormSchema = z.object({
     .email("Invalid email address")
     .nonempty("Email is required"),
   items: z.array(z.string()).refine((value) => value.length > 0, {
-    message: "You have to select at least one item."
+    message: "You have to select at least one item.",
   }),
   budget: z.tuple([z.number(), z.number()]),
-  message: z.string().nonempty("Message is required")
+  message: z.string().nonempty("Message is required"),
 });
 
 export function ContactForm() {
@@ -50,7 +50,7 @@ export function ContactForm() {
     control,
     handleSubmit,
     reset,
-    formState: { errors }
+    formState: { errors },
   } = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -58,8 +58,8 @@ export function ContactForm() {
       email: "",
       items: [],
       budget: [4500, 5500],
-      message: ""
-    }
+      message: "",
+    },
   });
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
@@ -69,16 +69,14 @@ export function ContactForm() {
     const options = {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: postData
+      body: postData,
     };
     const response = await fetch(endpoint, options);
-    if (response.status === 200) {
-      setEmailSubmitted(true);
-      setIsSubmitting(false);
-      reset();
-    }
+    setEmailSubmitted(true);
+    setIsSubmitting(false);
+    reset();
   };
 
   return (
