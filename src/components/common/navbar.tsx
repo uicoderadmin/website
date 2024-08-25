@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/services", text: "Services" },
   // { href: "/work", text: "Work" },
   { href: "/process", text: "Process" },
-  { href: "/about", text: "About" }
+  { href: "/about", text: "About" },
   // { href: "/careers", text: "Careers" }
 ];
 
@@ -52,10 +52,10 @@ const Navbar = () => {
           ))}
         </nav>
         <Link
-          href="/contact"
+          href="/bookappointment"
           className="bg-green-50 py-4 px-6 font-medium  text-grey-15 rounded-lg hidden lap:block text-nowrap"
         >
-          <span>Contact Us</span>
+          <span>Book an Appointment</span>
         </Link>
         <button
           type="button"

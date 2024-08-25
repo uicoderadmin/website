@@ -8,7 +8,7 @@ const navLinks = [
   { href: "/work", text: "Work" },
   { href: "/process", text: "Process" },
   { href: "/about", text: "About" },
-  { href: "/careers", text: "Careers" }
+  { href: "/careers", text: "Careers" },
 ];
 
 const Navbar = () => {
@@ -32,8 +32,11 @@ const Navbar = () => {
             </Link>
           ))}
         </nav>
-        <Link href="/contact" className="bg-green-50 py-4 px-6 font-medium text-lg text-grey-15 rounded-lg">
-          <span>Contact Us</span>
+        <Link
+          href="/bookappointment"
+          className="bg-green-50 py-4 px-6 font-medium text-lg text-grey-15 rounded-lg"
+        >
+          <span>Book an Appointment</span>
         </Link>
       </div>
     </header>

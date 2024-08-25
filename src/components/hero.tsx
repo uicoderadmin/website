@@ -42,7 +42,7 @@ const Hero: NextPage<HeroType> = ({ className = "" }) => {
           Our Works
         </button>
         <button className="bg-green-50 z-10 text-grey-15 border border-grey-15  desk:py-4 py-3 desk:px-7 px-5 rounded-xl">
-          Contact Us
+          Book an Appointment
         </button>
       </div>
     </section>
